@@ -5,19 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Base exercise page</title>
+    <title>N+7</title>
 
     <meta name="description" content="A simple exercise template." />
     <!-- styles -->
     <style></style>
   </head>
   <body>
-    <h1>Digital Writing Exercise Template</h1>
+    <h1>N+7</h1>
     <!-- script -->
-    <script></script>
+    <script>
+      let nouns;
+      const 
+      function initNouns(nounList) {
+        nouns = nounList.split(/\r?\n/);
+        console.log(nouns)
+      }
+      fetch('nounlist.txt')
+        .then(response => response.text())
+        .then(textContent => initNouns(textContent))
+      
+    </script>
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <div
+      class="glitchButton"
+      style="position: fixed; top: 20px; right: 20px"
+    ></div>
     <script src="https://button.glitch.me/button.js" defer></script>
   </body>
 </html>
