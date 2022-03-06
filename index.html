@@ -13,18 +13,29 @@
   </head>
   <body>
     <h1>N+7</h1>
+    <p id="text"></p>
     <!-- script -->
     <script>
       let nouns;
-      const 
+      const sourceText = `The first of these touches conveyed that the written statement took up the tale at a point after it had, in a manner, begun. The fact to be in possession of was therefore that his old friend, the youngest of several daughters of a poor country parson, had, at the age of twenty, on taking service for the first time in the schoolroom, come up to London, in trepidation, to answer in person an advertisement that had already placed her in brief correspondence with the advertiser.`;
       function initNouns(nounList) {
         nouns = nounList.split(/\r?\n/);
-        console.log(nouns)
+        // console.log(nouns);
+        generateNewText(sourceText);
       }
-      fetch('nounlist.txt')
-        .then(response => response.text())
-        .then(textContent => initNouns(textContent))
-      
+      function generateNewText(text) {
+        let splitText = text.split(" ");
+        let newText = "";
+        for (const word of splitText) {
+          let indexInList = (nouns.indexOf(word))
+          if (indexInList > -1) {
+            console.log(word);
+          }
+        }
+      }
+      fetch("nounlist.txt")
+        .then((response) => response.text())
+        .then((textContent) => initNouns(textContent));
     </script>
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
