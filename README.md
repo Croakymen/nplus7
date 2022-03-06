@@ -1,3 +1,3 @@
-# Empty page of exercises
+# A N+7 text processor
 
-An empty webpage for HTML/CSS/JavaScript exercises.
+A simple N+7 text processor from a list of known nouns.
